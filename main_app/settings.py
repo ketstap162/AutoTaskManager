@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "application",
 ]
 
 MIDDLEWARE = [
@@ -80,6 +81,9 @@ DATABASES = {
     }
 }
 
+# User Model
+
+AUTH_USER_MODEL = 'application.Employee'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -137,3 +141,4 @@ CACHES = {
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 SESSION_CACHE_ALIAS = "default"
+AUTH_USER_MODEL = 'application.Employee'
