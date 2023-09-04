@@ -19,10 +19,12 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
-from main_app.views import redirect_to_home
+from main_app.views import redirect_to_home, register_view
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("accounts/", include("django.contrib.auth.urls")),
+    path("register/", register_view, name="register"),
     path("", redirect_to_home),
     path("home/", include("application.urls", namespace="Application"))
 ]
