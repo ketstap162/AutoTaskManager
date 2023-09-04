@@ -1,0 +1,9 @@
+<div class="account-menu">
+  {% if user.is_authenticated %}
+    <a class="account-link" href="{% url 'logout' %}">Logout</a>
+    <div class="account-userinfo">{{ user.name }} | {{ user.email }}</div>
+  {% else %}
+    <a class="account-link" href="{% url 'login' %}">Login</a>
+    <a class="account-link" href="{% url 'register' %}">Register</a>
+  {% endif %}
+</div>
