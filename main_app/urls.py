@@ -19,9 +19,12 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
+from main_app.views import redirect_to_home
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("application.urls", namespace="Application"))
+    path("", redirect_to_home),
+    path("/home/", include("application.urls", namespace="Application"))
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
