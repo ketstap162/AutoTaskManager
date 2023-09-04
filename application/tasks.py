@@ -41,6 +41,8 @@ class TaskAddManager:
             print(time.time() // 60, time_point)
 
     def start(self) -> None:
+        if self.process:
+            self.process.terminate()
         self.process = multiprocessing.Process(target=self.regular_task_add, daemon=True)
         self.process.start()
 
