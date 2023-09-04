@@ -1,5 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-  
+  <table border="1" class="order-table">
+        <tr class="order-head">
+            <th class="order-header">Order ID</th>
+            <th class="order-header">Order Name</th>
+            <th class="order-header">Employee</th>
+            <th class="order-header">Delete</th>
+        </tr>
+        {% if orders %}
+          {% for order in orders %}
+            <tr class="order-row">
+                <td class="order-cell">{{ order.id}}</td>
+                <td class="order-cell">{{ order.name }}</td>
+                <td class="order-cell">{{ order.employee }}</td>
+              <td class="order-cell"><a class="delete-link" href="{% url 'Application:OrderDelete' pk=order.id %}">🗑️</a></td>
+            </tr>
+          {% endfor %}
+        {% else %}
+          <tr>
+            <td>No data</td>
+            <td>No data</td>
+            <td>No data</td>
+            <td>No data</td>
+            </tr>
+        {% endif %}
+    </table>
 {% endblock %}

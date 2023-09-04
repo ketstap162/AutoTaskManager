@@ -2,8 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Task Manager</title>
 </head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+<div class="task-menu">
+  <div class="task-text">Generate Tasks</div>
+  <div class="task-buttons">
+    <a class="task-btn btn-green" href="?task_add=activate">Start</a>
+    <a class="task-btn btn-red" href="?task_add=deactivate">Stop</a>
+  </div>
+</div>
 <body>
   {% block content %}
     No information...
