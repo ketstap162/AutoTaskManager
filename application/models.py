@@ -42,3 +42,8 @@ class Employee(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+
+class Order(models.Model):
+    name = models.CharField(max_length=40)
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE, null=True, blank=True)
