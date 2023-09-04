@@ -29,6 +29,7 @@ class EmployeeManager(BaseUserManager):
 
 
 class Employee(AbstractBaseUser, PermissionsMixin):
+    name = models.CharField(max_length=100, default="UnknownUser")
     email = models.EmailField(unique=True)
     probation = models.BooleanField(default=True)
     position = models.CharField(max_length=255)
