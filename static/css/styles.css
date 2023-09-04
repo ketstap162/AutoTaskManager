@@ -76,3 +76,30 @@ th td {
 a {
     all: initial;
 }
+
+.account-menu{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.account-link{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.account-userinfo{
+    display: block;
+    margin: 5px;
+    padding: 5px;
+}
+
+.short-link{
+    width: min-content;
+}
