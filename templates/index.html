@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
+  <div class="task-menu">
+    <div class="task-text">Generate Tasks</div>
+    <div class="task-buttons">
+      <a class="task-btn btn-green" href="?task_add=activate">Start</a>
+      <a class="task-btn btn-red" href="?task_add=deactivate">Stop</a>
+    </div>
+  </div>
+
   <table border="1" class="order-table">
         <tr class="order-head">
             <th class="order-header">Order ID</th>

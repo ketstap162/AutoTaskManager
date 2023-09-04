@@ -6,15 +6,8 @@
 </head>
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-
-<div class="task-menu">
-  <div class="task-text">Generate Tasks</div>
-  <div class="task-buttons">
-    <a class="task-btn btn-green" href="?task_add=activate">Start</a>
-    <a class="task-btn btn-red" href="?task_add=deactivate">Stop</a>
-  </div>
-</div>
 <body>
+  {% include "includes/account_menu.html" %}
   {% block content %}
     No information...
   {% endblock %}
