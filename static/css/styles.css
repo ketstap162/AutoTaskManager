@@ -1,0 +1,105 @@
+.task-menu{
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 200px;
+    display: block;
+}
+
+.task-text{
+    display: flex;
+    justify-content: center;
+}
+
+.task-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-btn{
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-green{
+    background-color: lightgreen;
+}
+
+.btn-red{
+    background-color: indianred;
+}
+
+th td {
+    margin: 10px;
+    padding: 10px;
+}
+
+.order-table{
+    margin: 20px;
+    padding: 10px;
+}
+
+.order-header{
+    margin: 5px;
+    padding: 10px;
+    width: 120px;
+    height: 20px;
+}
+
+.order-head{
+    height: 40px;
+}
+
+.order-row{
+    height: 20px;
+}
+
+.order-cell{
+    margin: 5px;
+    padding: 10px;
+    width: 120px;
+    height: 20px;
+    text-align: center;
+}
+
+.delete-link{
+    cursor: pointer;
+}
+
+a {
+    all: initial;
+}
+
+.account-menu{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.account-link{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.account-userinfo{
+    display: block;
+    margin: 5px;
+    padding: 5px;
+}
+
+.short-link{
+    width: min-content;
+}

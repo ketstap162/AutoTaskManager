@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Logged out!</h1>
+
+  <div class="">
+    <div>
+      <a href="{% url 'login'%}" class="account-link short-link">Click here</a> to login again.
+    </div>
+  </div>
+{% endblock %}

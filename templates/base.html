@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+</head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<body>
+  {% include "includes/account_menu.html" %}
+  {% block content %}
+    No information...
+  {% endblock %}
+</body>
+</html>
