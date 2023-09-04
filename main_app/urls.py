@@ -24,7 +24,7 @@ from main_app.views import redirect_to_home
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", redirect_to_home),
-    path("/home/", include("application.urls", namespace="Application"))
+    path("home/", include("application.urls", namespace="Application"))
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
