@@ -19,9 +19,11 @@ def home_page_view(request) -> HttpResponse:
     if task_add_param == "activate":
         task_manager.start()
         print("Task Add Started")
+        return redirect("Application:Home")
     elif task_add_param == "deactivate":
         task_manager.stop()
         print("Task Add Stopped")
+        return redirect("Application:Home")
 
     context = {
         "orders": Order.objects.select_related("employee")
@@ -43,4 +45,4 @@ def delete_task_view(request, pk: int) -> HttpResponse:
 
     TelegramBot.send_message(message)
 
-    return redirect('Application:Home')
+    return redirect("Application:Home")
